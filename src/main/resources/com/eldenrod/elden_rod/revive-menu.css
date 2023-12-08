@@ -1,0 +1,57 @@
+.button{
+    -fx-background-color: rgb(16, 15, 12);
+    -fx-border-color: rgb(116, 111, 98);
+    -fx-border-width: 3;
+    -fx-padding: 10;
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 20;
+}
+.button:hover{
+    -fx-background-color: rgb(85, 81, 66);
+    -fx-border-color: rgb(147, 146, 130);
+    -fx-border-width: 3;
+    -fx-padding: 10;
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 20;
+    -fx-effect: dropshadow( one-pass-box , #b2ad83, 22 , 0 , 0 , 0 );
+}
+.button:pressed{
+    -fx-background-color: rgb(125, 121, 105);
+    -fx-border-color: rgb(147, 146, 130);
+    -fx-border-width: 3;
+    -fx-padding: 10;
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 20;
+    -fx-effect: dropshadow( one-pass-box , #b2ad83, 22 , 0 , 0 , 0 );
+}
+.root{
+    -fx-background-color: #2d2c23;
+}
+#runesNumber{
+    -fx-font-size: 20;
+}
+#invibutton{
+    -fx-opacity: 0;
+}
+#line{
+    -fx-stroke-width: 3;
+    -fx-effect: dropshadow( one-pass-box , #b2ad83, 10, 0.5 , 0 , 0 );
+    -fx-stroke: #ded5a5;
+}
+#revive{
+    -fx-text-fill: #ded5a5;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 40;
+    -fx-alignment: center;
+}
+#runescounter{
+    -fx-font-family: "Times New Roman";
+    -fx-alignment: center-right;
+    -fx-font-size: 15;
+}

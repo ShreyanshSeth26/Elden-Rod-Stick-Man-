@@ -1,0 +1,46 @@
+/*@font-face {*/
+/*    font-family: 'EldenFont'; !* Choose a name for your font *!*/
+/*    src: url('MantiniaRegular.otf') format('opentype'); !* Specify the path to your font file *!*/
+/*}*/
+
+.root{
+    -fx-background-color: #282a36;
+}
+
+#eldenrod{
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0.1 , 0 , 0 );
+}
+
+#start{
+    -fx-opacity: 0;
+}
+
+#starttext{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: #ffd700;
+    -fx-alignment : center;
+    -fx-font-size : 20;
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0.2 , 0 , 0 );
+}
+#quitbutton{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18;
+    -fx-text-fill: #ffd700;
+
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow( one-pass-box , #454545, 22 , 0.2 , 0 , 0 );
+}
+.label{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: #ffd700;
+    -fx-alignment : center;
+    -fx-font-size : 15;
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0.2 , 0 , 0 );
+}
+#leaderboard {
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+#trophy{
+    -fx-effect: dropshadow( one-pass-box , black , 15 , 0.2 , 0 , 0 );
+}

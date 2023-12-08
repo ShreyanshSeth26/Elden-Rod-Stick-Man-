@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#switchToGameKey" prefHeight="560.0" prefWidth="1000.0" stylesheets="@menu-page.css" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eldenrod.elden_rod.MenuPageController">
+   <children>
+      <ImageView fitHeight="560.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../elden-ring-bg.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="starttext" layoutX="205.0" layoutY="369.0" prefHeight="51.0" prefWidth="600.0" text="Press any key to start" />
+      <Button fx:id="start" layoutX="409.0" layoutY="369.0" mnemonicParsing="false" onAction="#switchToGameClick" prefHeight="58.0" prefWidth="193.0" />
+      <ImageView fx:id="eldenrod" fitHeight="116.0" fitWidth="639.0" layoutX="185.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../title.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="quitbutton" layoutX="3.0" layoutY="518.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+      <Rectangle fx:id="leaderboard" arcHeight="60.0" arcWidth="60.0" fill="#6180794d" height="201.0" layoutX="784.0" layoutY="349.0" opacity="0.8" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <ImageView fx:id="trophy" fitHeight="58.0" fitWidth="48.0" layoutX="860.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../trophy.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="784.0" layoutY="441.0" prefHeight="91.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="132.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="67.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="117.0" text="High Score" />
+            <Label fx:id="hscore" prefHeight="17.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" />
+            <Label prefHeight="18.0" prefWidth="117.0" text="Last Score" GridPane.rowIndex="1" />
+            <Label fx:id="lscore" prefHeight="17.0" prefWidth="99.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="117.0" text="Runes" GridPane.rowIndex="2" />
+            <Label fx:id="runes" prefHeight="17.0" prefWidth="99.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

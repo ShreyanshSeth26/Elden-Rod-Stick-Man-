@@ -1,0 +1,48 @@
+.root{
+    -fx-background-color: #282a36;
+}
+#back{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18;
+    -fx-background-radius: 30;
+    -fx-text-fill: "white";
+    -fx-border-radius: 30;
+
+    -fx-background-color: rgba(192, 192, 192, 0.2);
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );
+}
+#pillar1{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#pillar2{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#pillar3{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#rod{-fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#tarnished{
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );
+}
+#diedtext{
+    -fx-alignment:center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:80;
+    -fx-text-fill: #a92929;
+}
+#scoreboard{
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+    -fx-opacity:0.6;
+}
+#runesboard{
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+    -fx-opacity: 0.8;
+}
+#scorecounter{
+    -fx-font-family: "Times New Roman";
+    -fx-alignment: center;
+    -fx-font-size: 30;
+}
+#runescounter{
+    -fx-font-family: "Times New Roman";
+    -fx-alignment: center-right;
+    -fx-font-size: 15;
+}
