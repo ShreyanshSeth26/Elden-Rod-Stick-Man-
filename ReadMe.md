@@ -46,3 +46,5 @@ looping block.
 ## Serialization 📩
 Class Tarnished is actually serialized automatically when game is exited or Tarnished gets out and is deserialised when we got to menu-page.
 Moreover, you can save the progress at any time in the game.
+
+## [GitHub Repository Link 🔗](https://github.com/weebsuryansh/Elden-Rod)
