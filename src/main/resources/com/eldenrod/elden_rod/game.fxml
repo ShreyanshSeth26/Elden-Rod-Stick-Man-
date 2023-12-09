@@ -14,6 +14,10 @@
             <Image url="@../../../limgrave.jpg" />
          </image>
       </ImageView>
+      <Rectangle fx:id="controlsBG" arcHeight="90.0" arcWidth="90.0" fill="#ded6ad6b" height="136.0" layoutX="188.0" layoutY="55.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="646.0" />
+      <Label fx:id="controls" layoutX="358.0" layoutY="65.0" prefHeight="17.0" prefWidth="305.0" text="Controls" textFill="WHITE" />
+      <Label fx:id="controlstext1" layoutX="131.0" layoutY="110.0" prefHeight="23.0" prefWidth="772.0" text="Rod - Press and hold mouse button to elongate" textFill="WHITE" />
+      <Label fx:id="controlstext2" layoutX="163.0" layoutY="136.0" prefHeight="17.0" prefWidth="696.0" text="Flip - Press and hold any keyboard key (except spacebar) to flip tarnished." textFill="WHITE" />
       <Button fx:id="back" layoutX="877.0" layoutY="14.0" mnemonicParsing="false" onAction="#showPauseMenu" prefHeight="58.0" prefWidth="107.0" text="Back" />
       <ImageView fx:id="pillar1" fitHeight="200.0" fitWidth="138.0" layoutX="115.0" layoutY="362.0">
          <image>

@@ -46,3 +46,21 @@
     -fx-alignment: center-right;
     -fx-font-size: 15;
 }
+#controls{
+    -fx-alignment: center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:35;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#controlstext1{
+    -fx-alignment: center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:20;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#controlstext2{
+    -fx-alignment: center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:20;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
