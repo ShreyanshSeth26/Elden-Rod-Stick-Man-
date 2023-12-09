@@ -253,7 +253,7 @@ public class BossFightController extends Controller implements Initializable {
         textFade.setFromValue(0);
         textFade.setToValue(1);
         textFade2.setFromValue(0);
-        textFade2.setToValue(0.7);
+        textFade2.setToValue(0.4);
         bannerFade.setFromValue(0);
         bannerFade.setToValue(0.7);
         ParallelTransition died= new ParallelTransition(textFade,bannerFade,textFade2);
@@ -264,7 +264,7 @@ public class BossFightController extends Controller implements Initializable {
             godfrey.setOpacity(0);
             diedbanner.setOpacity(0.7);
             victory.setOpacity(1);
-            victoryBG.setOpacity(0.7);
+            victoryBG.setOpacity(0.4);
             try {
                 increaseStamina.join();
                 godfreyAttack.join();
