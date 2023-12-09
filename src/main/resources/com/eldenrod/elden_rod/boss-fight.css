@@ -1,0 +1,99 @@
+.root{
+    -fx-background-color: #282a36;
+}
+#back{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18;
+    -fx-background-radius: 30;
+    -fx-text-fill: "white";
+    -fx-border-radius: 30;
+
+    -fx-background-color: rgba(192, 192, 192, 0.2);
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );
+}
+#pillar1{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#pillar3{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#godfrey{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#axe{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#sword{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+#sheild{-fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );}
+
+
+#tarnished{
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );
+}
+#diedtext{
+    -fx-alignment:center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:80;
+    -fx-text-fill: #a92929;
+}
+#victory{
+    -fx-alignment:center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:80;
+    -fx-text-fill: #fbc939;
+}
+#victoryBG{
+    -fx-alignment:center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:85;
+    -fx-text-fill: #fbc939;
+}
+#scoreboard{
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+    -fx-opacity:0.6;
+}
+#runesboard{
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+    -fx-opacity: 0.8;
+}
+#scorecounter{
+    -fx-font-family: "Times New Roman";
+    -fx-alignment: center;
+    -fx-font-size: 30;
+}
+#runescounter{
+    -fx-font-family: "Times New Roman";
+    -fx-alignment: center-right;
+    -fx-font-size: 15;
+}
+#healthbar{
+    -fx-accent: #9d312a;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#bosshealth{
+    -fx-accent: #9d312a;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#staminabar{
+    -fx-accent: #378957;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+
+#godfreyName{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0.5 , 0 , 0 );
+}
+#controls{
+    -fx-alignment: center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:35;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#controlstext1{
+    -fx-alignment: center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:20;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}
+#controlstext2{
+    -fx-alignment: center;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size:20;
+    -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
+}

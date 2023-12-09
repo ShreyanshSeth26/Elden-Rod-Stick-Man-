@@ -64,3 +64,16 @@
     -fx-font-size:20;
     -fx-effect: dropshadow( one-pass-box , black , 10 , 0 , 0 , 0 );
 }
+#boss{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18;
+    -fx-background-radius: 30;
+    -fx-text-fill: "white";
+    -fx-border-radius: 30;
+
+    -fx-background-color: rgba(192, 192, 192, 0.2);
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-effect: dropshadow( one-pass-box , black , 22 , 0 , 0 , 0 );
+}

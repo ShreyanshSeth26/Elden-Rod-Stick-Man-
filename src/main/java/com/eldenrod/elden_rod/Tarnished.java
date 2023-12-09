@@ -19,6 +19,14 @@ public class Tarnished implements Serializable {
     private int lastScore=0;
     private int highestScore=0;
     private int Runes;
+    private transient int numPillars=0;
+    public int getNumPillars() {
+        return numPillars;
+    }
+
+    public void setNumPillars(int numPillars) {
+        this.numPillars = numPillars;
+    }
 
     public boolean isRevive() {
         return revive;

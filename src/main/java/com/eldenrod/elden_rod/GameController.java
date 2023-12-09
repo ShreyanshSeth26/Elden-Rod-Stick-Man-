@@ -28,7 +28,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class GameController implements Initializable {
+public class GameController extends Controller implements Initializable {
     @FXML
     private Label runescounter;
     @FXML
@@ -77,67 +77,17 @@ public class GameController implements Initializable {
         Pillar.setPillars(pillars);
         runescounter.setText(String.valueOf(Tarnished.getInstance().getRunes()));
     }
-    private void playMusic(String filePath, Boolean isInfinite){
-        //this function is private as it is a helper function so, no need to be public
-        Media media = new Media(new File(filePath).toURI().toString());
-        mediaPlayer=EldenRodMain.getMediaPlayer();
-        mediaPlayer.stop();
-        mediaPlayer = new MediaPlayer(media);
-        if(isInfinite) {
-            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-        }
-        EldenRodMain.setMediaPlayer(mediaPlayer);
-        mediaPlayer.play();
-    }
-    public void switchToMenuPage() throws IOException{
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu-page.fxml")));
+    private void showBossReal() throws IOException{
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("boss-fight.fxml")));
         stage = EldenRodMain.getStage();
         scene = new Scene(root);
-        playMusic("src\\main\\resources\\music\\01_EldenRing.mp3",true);
+        playMusic("src\\main\\resources\\music\\65-Godfrey.mp3",true);
         stage.setScene(scene);
         EldenRodMain.setScene(scene);
         stage.show();
     }
-    public void showPauseMenu() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("pause-menu.fxml"));
-        Parent root = loader.load();
-
-        //creating a new stage for the pause menu
-        Stage pmStage=new Stage();
-        pmStage.setTitle("Pause Menu");
-        pmStage.initModality(Modality.APPLICATION_MODAL);
-        pmStage.initOwner(EldenRodMain.getScene().getWindow());
-        pmStage.initStyle(StageStyle.TRANSPARENT);
-        pmStage.setOpacity(0.95);
-
-        Scene pmScene = new Scene(root);
-        pmStage.setScene(pmScene);
-        pmStage.showAndWait();
-    }
-    public void showReviveMenu() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("revive-menu.fxml"));
-        Parent root = loader.load();
-
-        //creating a new stage for the pause menu
-        Stage rmStage=new Stage();
-        rmStage.setTitle("Revive Menu");
-        rmStage.initModality(Modality.APPLICATION_MODAL);
-        rmStage.initOwner(EldenRodMain.getScene().getWindow());
-        rmStage.initStyle(StageStyle.TRANSPARENT);
-        rmStage.setOpacity(0.95);
-
-        Scene rmScene = new Scene(root);
-        rmStage.setScene(rmScene);
-        rmStage.showAndWait();
-        if(!Tarnished.getInstance().isRevive()){
-            switchToMenuPage();
-        }
-        else{
-            reviveTarnished();
-        }
-    }
-    public void save() throws IOException {
-        PauseMenuController.saveFile();
+    public void showBoss(ActionEvent event) throws IOException{
+        showBossReal();
     }
     public void startRuneCollection(KeyEvent event) throws IOException{
         isKeyPressed=true;
@@ -290,7 +240,17 @@ public class GameController implements Initializable {
                 scorecounter.setText(String.valueOf(tarnishedObject.getScore()));
                 System.out.println(tarnishedObject.getScore());
                 presentRod=outValue;
-                if(outValue == 2){
+                tarnishedObject.setNumPillars(tarnishedObject.getNumPillars()+1);
+                if(tarnishedObject.getNumPillars()==8){
+                    Platform.runLater(()->{
+                        try {
+                            showBossReal();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+                }
+                else if(outValue == 2){
                     movePillars();
                 }
             }
