@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxWidth="1000.0" onMousePressed="#mousePressedHandler" onMouseReleased="#mouseReleasedHandler" prefHeight="560.0" prefWidth="1000.0" stylesheets="@boss-fight.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eldenrod.elden_rod.BossFightController">
+<AnchorPane maxWidth="1000.0" onMousePressed="#mousePressedHandler" onMouseReleased="#mouseReleasedHandler" prefHeight="560.0" prefWidth="1000.0" stylesheets="@boss-fight.css" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eldenrod.elden_rod.BossFightController">
    <children>
       <ImageView fitHeight="563.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -78,7 +78,7 @@
       <Label fx:id="victory" layoutX="138.0" layoutY="237.0" opacity="0.0" prefHeight="91.0" prefWidth="724.0" text="DEMIGOD FELLED" textFill="RED" />
       <Rectangle fx:id="controlsBG" arcHeight="90.0" arcWidth="90.0" fill="#b7b4aa80" height="112.0" layoutX="554.0" layoutY="19.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="243.0" />
       <Label fx:id="controls" layoutX="554.0" layoutY="29.0" prefHeight="39.0" prefWidth="243.0" text="Controls " textFill="WHITE" />
-      <Label fx:id="controlstext1" layoutX="539.0" layoutY="70.0" prefHeight="23.0" prefWidth="273.0" text="Right click-Attack" textFill="WHITE" />
-      <Label fx:id="controlstext2" layoutX="554.0" layoutY="93.0" prefHeight="17.0" prefWidth="243.0" text="Left click-Defense" textFill="WHITE" />
+      <Label fx:id="controlstext1" layoutX="539.0" layoutY="70.0" prefHeight="23.0" prefWidth="273.0" text="Left click-Attack" textFill="WHITE" />
+      <Label fx:id="controlstext2" layoutX="554.0" layoutY="93.0" prefHeight="17.0" prefWidth="243.0" text="Right click-Defense" textFill="WHITE" />
    </children>
 </AnchorPane>
