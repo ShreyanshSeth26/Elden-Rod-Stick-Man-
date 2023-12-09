@@ -77,7 +77,6 @@ public class GameController implements Initializable {
         Pillar.setPillars(pillars);
         runescounter.setText(String.valueOf(Tarnished.getInstance().getRunes()));
     }
-
     private void playMusic(String filePath, Boolean isInfinite){
         //this function is private as it is a helper function so, no need to be public
         Media media = new Media(new File(filePath).toURI().toString());
@@ -90,7 +89,6 @@ public class GameController implements Initializable {
         EldenRodMain.setMediaPlayer(mediaPlayer);
         mediaPlayer.play();
     }
-
     public void switchToMenuPage() throws IOException{
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu-page.fxml")));
         stage = EldenRodMain.getStage();
@@ -100,10 +98,6 @@ public class GameController implements Initializable {
         EldenRodMain.setScene(scene);
         stage.show();
     }
-    public void switchToMenuPage(javafx.event.ActionEvent event) throws IOException {
-        switchToMenuPage();
-    }
-
     public void showPauseMenu() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("pause-menu.fxml"));
         Parent root = loader.load();
@@ -119,6 +113,28 @@ public class GameController implements Initializable {
         Scene pmScene = new Scene(root);
         pmStage.setScene(pmScene);
         pmStage.showAndWait();
+    }
+    public void showReviveMenu() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("revive-menu.fxml"));
+        Parent root = loader.load();
+
+        //creating a new stage for the pause menu
+        Stage rmStage=new Stage();
+        rmStage.setTitle("Revive Menu");
+        rmStage.initModality(Modality.APPLICATION_MODAL);
+        rmStage.initOwner(EldenRodMain.getScene().getWindow());
+        rmStage.initStyle(StageStyle.TRANSPARENT);
+        rmStage.setOpacity(0.95);
+
+        Scene rmScene = new Scene(root);
+        rmStage.setScene(rmScene);
+        rmStage.showAndWait();
+        if(!Tarnished.getInstance().isRevive()){
+            switchToMenuPage();
+        }
+        else{
+            reviveTarnished();
+        }
     }
     public void save() throws IOException {
         PauseMenuController.saveFile();
@@ -241,7 +257,6 @@ public class GameController implements Initializable {
             System.out.println("error in stopping rod elongation");
         }
     }
-
     private void rodTarnishedAnimation(){
         extendFlag=false;
         TranslateTransition translate = new TranslateTransition();
@@ -437,30 +452,6 @@ public class GameController implements Initializable {
             }
         });
     }
-
-    public void showReviveMenu() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("revive-menu.fxml"));
-        Parent root = loader.load();
-
-        //creating a new stage for the pause menu
-        Stage rmStage=new Stage();
-        rmStage.setTitle("Revive Menu");
-        rmStage.initModality(Modality.APPLICATION_MODAL);
-        rmStage.initOwner(EldenRodMain.getScene().getWindow());
-        rmStage.initStyle(StageStyle.TRANSPARENT);
-        rmStage.setOpacity(0.95);
-
-        Scene rmScene = new Scene(root);
-        rmStage.setScene(rmScene);
-        rmStage.showAndWait();
-        if(!Tarnished.getInstance().isRevive()){
-            switchToMenuPage();
-        }
-        else{
-            reviveTarnished();
-        }
-    }
-
     public void reviveTarnished(){
         tarnished.setTranslateY(0);
         tarnished.setTranslateX(0);
@@ -469,8 +460,6 @@ public class GameController implements Initializable {
         runescounter.setText(String.valueOf(Tarnished.getInstance().getRunes()));
         playMusic("src\\main\\resources\\music\\04_Limgrave.mp3",true);
     }
-
-
     public static void stopThreads() throws InterruptedException {
         if(rodElongation!=null && rodElongation.isAlive()){
             isMousePressed=false;
