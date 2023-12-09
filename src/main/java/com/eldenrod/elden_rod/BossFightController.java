@@ -244,6 +244,8 @@ public class BossFightController extends Controller implements Initializable {
     private void enemyFelled(){
         tarnishedObject.setRunes(tarnishedObject.getRunes()+1000);
         runescounter.setText(String.valueOf(tarnishedObject.getRunes()));
+        tarnishedObject.setScore(tarnishedObject.getScore()+300);
+        scorecounter.setText(String.valueOf(tarnishedObject.getScore()));
         FadeTransition textFade = new FadeTransition(Duration.millis(1800),victory);
         FadeTransition textFade2 = new FadeTransition(Duration.millis(1800),victoryBG);
         FadeTransition bannerFade = new FadeTransition(Duration.millis(1000),diedbanner);
