@@ -1,10 +1,9 @@
 # **ELDEN ROD**
 >The game is a copy of **Stick Hero** and a homage to 2022 GOTY **Elden Ring**.
 
-## Authors ✍️
-> **Suryansh Varshney** - 2022519 \
-> Suryansh Kumar Singh - 2022518 \
-> Group Number - 57
+## Authors 
+> **Suryansh Varshney** - suryanshvarshney28@gmail.com
+
 
 ## Important Key Terms❗
 * **Tarnished** (equivalent to Stick Hero)
