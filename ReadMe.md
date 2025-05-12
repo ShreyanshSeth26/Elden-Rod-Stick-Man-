@@ -2,8 +2,8 @@
 >The game is a copy of **Stick Hero** and a homage to 2022 GOTY **Elden Ring**.
 
 ## Authors 
-> **Suryansh Varshney** - suryanshvarshney28@gmail.com
-> **Shreyansh Seth** - shreyanshseth212@gmail.com
+**Suryansh Varshney** - suryanshvarshney28@gmail.com
+**Shreyansh Seth** - shreyanshseth212@gmail.com
 
 
 ## Important Key Terms❗
