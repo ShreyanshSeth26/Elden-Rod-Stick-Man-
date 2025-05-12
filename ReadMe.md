@@ -3,6 +3,7 @@
 
 ## Authors 
 > **Suryansh Varshney** - suryanshvarshney28@gmail.com
+> **Shreyansh Seth** - shreyanshseth212@gmail.com
 
 
 ## Important Key Terms❗
